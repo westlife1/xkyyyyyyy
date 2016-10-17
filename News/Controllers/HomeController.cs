@@ -20,6 +20,19 @@ namespace News.Controllers
             return View();
         }
 
+        public ActionResult Welcome()
+        {
+            var a = 100;
+            var sum = 0;
+            for (var i = 1; i <= a; i++)
+            {
+                sum += i;
+            }
+
+            ViewBag.sum = sum;
+            return View();
+        }
+
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
