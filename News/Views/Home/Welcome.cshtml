@@ -9,14 +9,6 @@
 
 
 
-<ul>
-    <li>@Html.ActionLink("主页", "Index", "Home")</li>
-    <li>@Html.ActionLink("关于", "About", "Home")</li>
-    <li>@Html.ActionLink("联系方式", "Contact", "Home")</li>
-    <li>@Html.ActionLink("Welcome", "Welcome", "Home")</li>
-</ul>
-
-
 <div>
     <h1>welcome </h1>
     <div>结果：@ViewBag.sum </div>
@@ -24,7 +16,7 @@
     <div> @( "TIME:" + DateTime.Now.ToString() )</div>
 </div>
 
-<ul>
+<ul  class="list-unstyled">
     @for (int i = 0; i < 10; i++)
     {
         <li>元素:@(i + 1)</li>
