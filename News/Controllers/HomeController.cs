@@ -42,16 +42,18 @@ namespace News.Controllers
         /// 新闻列表
         /// </summary>
         /// <returns></returns>
-        public ActionResult List()
+        public ActionResult List(int page=10)
         {
             string[] data= new string[] { "台风逼近广西景区关闭学校停课",
                 "广西每年入境游客超300万" ,
                 "空军招飞初选10月24日开始",
                 "柳州城市轨道交通勘探工作已展开"};
 
-            //ViewBag.data = data;
+            ViewBag.data = data;
+            ViewBag.Page = page;
+
             //ViewData["data"] = data;
-            ViewData.Model = data;
+            //ViewData.Model = data;
             return View();
         }
 
@@ -59,6 +61,26 @@ namespace News.Controllers
         {
             ViewBag.Message = "Your contact page.";
 
+            return View();
+        }
+
+        /// <summary>
+        /// 添加新闻
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult Add()
+        {
+            return View();
+        }
+
+        /// <summary>
+        /// 保存新闻内容
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult Save(string title, string content)
+        {
+            ViewBag.Title = title;
+            ViewBag.Content = content;
             return View();
         }
     }
